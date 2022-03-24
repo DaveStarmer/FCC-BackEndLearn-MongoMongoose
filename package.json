@@ -9,13 +9,9 @@
     "dependencies": {
         "body-parser": "^1.15.2",
         "dotenv": "^8.2.0",
-<<<<<<< HEAD
         "express": "^4.12.4",
         "mongodb": "^4.4.1",
         "mongoose": "^6.2.8"
-=======
-        "express": "^4.12.4"
->>>>>>> 5a76a543845f550856b141c8d44e302b609bd5b5
     },
     "repository": {
         "type": "git",
