@@ -16,17 +16,18 @@ let Person = mongoose.model('Person',personSchema);
 
 
 
-const createAndSavePerson = async (done) => {
+const createAndSavePerson = (done) => {
   let p = new Person();
   p.name = "test person";
   p.age = 23;
   p.favoriteFoods.push("something to eat");
 
-  await p.save(); 
+  p.save(); 
   done(null , p);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
+
   done(null /*, data*/);
 };
 
@@ -39,7 +40,9 @@ const findOneByFood = (food, done) => {
 };
 
 const findPersonById = (personId, done) => {
-  done(null /*, data*/);
+  const query = Person.find();
+  const data = query.where('_id',personId);
+  done(null , data);
 };
 
 const findEditThenSave = (personId, done) => {
