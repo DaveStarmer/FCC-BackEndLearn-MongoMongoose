@@ -103,11 +103,11 @@ const removeById = (personId, done) => {
 
 const removeManyPeople = (done) => {
   const nameToRemove = "Mary";
-  Person.remove({"name":nameToRemove}, (err,doc)=>{
+  Person.deleteMany({name:nameToRemove}, (err,doc)=>{
     if (err) {
       done(err);
     }
-    done(null,doc);
+    done(null,JSON.stringify(doc));
   });
 };
 
