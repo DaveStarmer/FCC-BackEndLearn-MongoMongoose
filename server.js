@@ -350,9 +350,9 @@ router.post("/remove-many-people", function (req, res, next) {
               }
             }
             res.json({
-              n: data.n,
+              n: data.deletedCount,
               count: cnt,
-              ok: data.ok,
+              ok: data.acknowledged,
             });
           });
         });
